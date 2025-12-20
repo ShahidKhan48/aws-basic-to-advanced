@@ -1,3 +1,220 @@
+AWS – MIND MAP STYLE NOTES
+🧠 1. AWS CORE CONCEPTS
+AWS
+├── Global Infrastructure
+│   ├── Region
+│   ├── Availability Zone (AZ)
+│   └── Edge Location (CDN)
+│
+├── Account
+│   ├── Root User
+│   ├── IAM User
+│   ├── IAM Role
+│   └── Billing
+│
+├── Pricing
+│   ├── Pay-as-you-go
+│   ├── On-Demand
+│   ├── Reserved
+│   └── Spot
+│
+└── Shared Responsibility
+    ├── AWS → Infra, DC, Hardware
+    └── User → OS, App, Data, IAM
+
+🧠 2. COMPUTE – EC2
+EC2
+├── Instance
+│   ├── AMI
+│   ├── Instance Type
+│   │   ├── General (t, m)
+│   │   ├── Compute (c)
+│   │   ├── Memory (r)
+│   │   └── Storage (i)
+│   ├── Key Pair
+│   ├── Security Group
+│   └── EBS
+│
+├── Pricing
+│   ├── On-Demand
+│   ├── Reserved
+│   └── Spot
+│
+└── Network
+    ├── Public IP
+    └── Elastic IP
+
+🧠 3. NETWORKING – VPC
+VPC
+├── CIDR Block
+├── Subnet
+│   ├── Public
+│   └── Private
+│
+├── Routing
+│   ├── Route Table
+│   ├── Internet Gateway
+│   └── NAT Gateway
+│
+├── Security
+│   ├── Security Group (Stateful)
+│   └── NACL (Stateless)
+│
+└── Connectivity
+    ├── VPC Peering
+    ├── Transit Gateway
+    └── VPN
+
+🧠 4. STORAGE – S3
+S3
+├── Bucket
+│   ├── Object
+│   └── Key
+│
+├── Storage Class
+│   ├── Standard
+│   ├── IA
+│   ├── One-Zone IA
+│   ├── Glacier
+│   └── Deep Archive
+│
+├── Features
+│   ├── Versioning
+│   ├── Lifecycle
+│   ├── Encryption
+│   └── Static Website
+│
+└── Access
+    ├── Bucket Policy
+    └── IAM Policy
+
+🧠 5. DATABASE SERVICES
+Database
+├── RDS
+│   ├── MySQL
+│   ├── PostgreSQL
+│   ├── Oracle
+│   └── Multi-AZ
+│
+├── Aurora
+│   ├── High Performance
+│   └── Auto Scaling
+│
+├── DynamoDB
+│   ├── NoSQL
+│   ├── Key-Value
+│   └── Serverless
+│
+└── Others
+    ├── ElastiCache
+    └── Redshift
+
+🧠 6. IAM & SECURITY
+IAM
+├── Identity
+│   ├── User
+│   ├── Group
+│   └── Role
+│
+├── Policy
+│   ├── Managed
+│   ├── Inline
+│   └── Resource-based
+│
+├── Security
+│   ├── MFA
+│   ├── STS
+│   └── Least Privilege
+│
+└── Access
+    ├── Cross Account
+    └── Service Role
+
+🧠 7. CONTAINERS – EKS & ECR
+Containers
+├── EKS
+│   ├── Control Plane (AWS)
+│   ├── Worker Nodes (EC2)
+│   ├── Node Group
+│   └── Auto Scaling
+│
+├── ECR
+│   ├── Docker Images
+│   └── Private Registry
+│
+└── Security
+    ├── IRSA
+    └── IAM Integration
+
+🧠 8. LOAD BALANCING
+Load Balancer
+├── ALB
+│   ├── HTTP/HTTPS
+│   └── Path Routing
+│
+├── NLB
+│   ├── TCP/UDP
+│   └── High Performance
+│
+└── CLB
+    └── Legacy
+
+🧠 9. DNS – ROUTE 53
+Route 53
+├── Hosted Zone
+├── Record Type
+│   ├── A
+│   ├── CNAME
+│   └── ALIAS
+│
+├── Routing Policy
+│   ├── Simple
+│   ├── Weighted
+│   ├── Latency
+│   ├── Failover
+│   └── Geo
+│
+└── Health Check
+
+🧠 10. AUTO SCALING
+Auto Scaling
+├── ASG
+│   ├── Min
+│   ├── Max
+│   └── Desired
+│
+├── Policy
+│   ├── Target Tracking
+│   ├── Step Scaling
+│   └── Scheduled
+│
+└── Integrated With
+    ├── EC2
+    ├── ALB
+    └── EKS
+
+🧠 11. SERVERLESS & EVENTS
+Serverless
+├── Lambda
+│   ├── Event Driven
+│   ├── Stateless
+│   └── Pay per Execution
+│
+├── Messaging
+│   ├── SQS (Queue)
+│   ├── SNS (Pub/Sub)
+│   └── EventBridge
+│
+└── Monitoring
+    ├── CloudWatch Logs
+    ├── Metrics
+    └── Alarms
+
+🧠 12. REAL-TIME FLOW (ONE LINE MIND MAP)
+User → Route53 → ALB → EC2 (ASG) → RDS
+            ↓
+           S3 → CloudWatch → SNS/SQS
+
 # aws-devops-zero-to-hero
 
 Complete YouTube playlist - https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze
